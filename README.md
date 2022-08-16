@@ -7,7 +7,7 @@ This dataset allows clients to find out the data on transactions conducted in ci
 - Quarterly (8 indicators)
 - Annual (8 indicators)
 
-The dataset is collected and scrapped from [Ministry of Justice][https://www.moj.gov.sa/ar/opendata/bi/birealestate/Dashboards/200_kpiTown/201_Monthly/kpi201_04_G.aspx]. I will choose Jeddah city with all districts as a sample training the model. In addition, the dataset period is from Jan 1, 2022, to Aug 3, 2022 which is the last update from Ministry of Justice
+The dataset is collected and scrapped from [Ministry of Justice][https://www.moj.gov.sa/ar/opendata/bi/birealestate/Dashboards/200_kpiTown/201_Monthly/kpi201_04_G.aspx]. I will choose Jeddah city with all districts as a sample training the model. In addition, the dataset period is from Jan 1, 2021, to Aug 3, 2022 which is the last update from Ministry of Justice
 
 
 The observations of the dataset were descriped using 9 features as follows:
