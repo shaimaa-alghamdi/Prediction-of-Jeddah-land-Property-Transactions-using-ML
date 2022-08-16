@@ -16,7 +16,7 @@ The observations of the dataset were descriped using 9 features as follows:
 | features | description |
 | --------------- | --------------- | 
 | City | The city where land locate |
-| Distric | The district where land locate in |
+| District | The district where land locate in |
 | Block | The block of the land |
 | Land_Num |The details of the land (e.g, A/122)|
 | Date| The Land transaction date|
