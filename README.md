@@ -1,5 +1,9 @@
 # Prediction-of-Jeddah-land-Property-Transactions-using-ML
 
+
+## Goal 
+Goal: There is a significant movement in property transactions in Jeddah city, especially the lands. Therefore, there is a need for an ML model to predict property prices based on the neighborhood, block, area and date.
+
 ## The Dataset
 This dataset allows clients to find out the data on transactions conducted in cities during a certain time period (monthly, quarterly, or annual). The indicators measure the number of transactions, the number of properties, the value in Saudi riyals, the area in square meters, and the value of square meter. They enable monitoring the status of property transactions in various cities, finding out the most active cities, viewing the average price of property and the price of square meter, and comparing with different cities. They also enable easy monitoring of the details and values of transactions conducted in cities, and include 24 indicators as follows:
 
@@ -16,11 +20,11 @@ The observations of the dataset were descriped using 9 features as follows:
 | features | description |
 | --------------- | --------------- | 
 | City | The city where land locate |
-| District | The district where land locate in |
+| Neighborhood | The neighborhood where land locate in |
 | Block | The block of the land |
-| Land_Num |The details of the land (e.g, A/122)|
+| Land_number |The details of the land (e.g, A/122)|
 | Date| The Land transaction date|
 | id |The number of each land transaction|
-| Size| The land area in square meters|
-| Value | Value of a square meter| 
-| prices |The transaction price in Saudi Riyals SR| 
+| Area| The land area in square meters|
+| Square_meter_price | The Value of a square meter| 
+| Full_price |The transaction price in Saudi Riyals SR| 
