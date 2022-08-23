@@ -1,28 +1,38 @@
+import string
 import streamlit as st
 import pandas as pd
 import numpy as np
 import datetime
+import sklearn
 from joblib import dump, load
+import xgboost as xgb
+import re
 
+# To show Image
+from PIL import Image
+image = Image.open('7K1A8759.jpg')
+st.image(image, caption='-')
 
-Neighborhood_list = set(load('neighborhood_list.joblib'))
-block_list = set(load('block_list.joblib'))
+# 
+neighborhood_dict = load('neighborhood_dict2.joblib')
+#block_list = set(load('block_list.joblib'))
 
 # Title
-st.header("Prediction of Jeddah land Property Transactions")
+st.header("know about the Jeddah lands prices before investing!")
+#st.title ("know about the Jeddah lands6 prices before investing!")
+#st.title("Welcome, know about the Jeddah lands prices before investing.")
 
-Neighborhood = st.selectbox("Select the land Neighborhood", Neighborhood_list)
-block = st.selectbox("Select the land block", block_list)
-Area = st.number_input("Area", 50)
-
-# still date
-
+Re = re.compile(".*[أءإاضصثقفغعهخحجةشسيبلاتنمكظطذدزرو]{2}.*") 
+Neighborhood_list = [n for n in list(neighborhood_dict) if Re.match(n) is not None]
+Neighborhood = st.selectbox("Select the Neighborhood", Neighborhood_list)
+block = st.selectbox("Select the block", neighborhood_dict[Neighborhood])
+Area = st.number_input("Area of the land", 50)
 d = st.date_input(
      "Date",
      datetime.date(2021, 1, 1), datetime.date(2021, 1, 1))
 
 # If button is pressed
-#Make prediction button
+# Make prediction button
 if st.button('Makek Prediction'):
    # Unpickle classifier
     model = load('model.joblib') 
@@ -33,7 +43,6 @@ if st.button('Makek Prediction'):
     columns = load('columns.joblib') 
 
 
-        # Store inputs into dataframe
     p_year = d.year - 2021
     # log then transform the area
     p_area = np.log(Area)
@@ -57,6 +66,10 @@ if st.button('Makek Prediction'):
 
     df_input = pd.DataFrame(input_data, index=[0], columns=columns)
     y_pred = model.predict(df_input)
-    y_actual = np.exp(meter_price_scaler.inverse_transform(y_pred[0].reshape(-1, 1))) * Area
+    Calculate_SM = np.exp(meter_price_scaler.inverse_transform(y_pred[0].reshape(-1, 1)))
+    y_actual = Calculate_SM * Area
+    
+     # show the results
+    st.markdown(f"The land square meter price is <span style='color:#F0CEA3'>**{round(Calculate_SM [0][0])}**</span>", True)
+    st.markdown(f"The land price is  <span style='color:#F0CEA3'>**{round(y_actual[0][0])}**</span>", True)
 
-    f"The land price is  {y_actual[0][0]}"
