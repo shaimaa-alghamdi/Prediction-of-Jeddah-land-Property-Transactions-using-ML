@@ -47,7 +47,7 @@ The observations of the dataset were descriped using 9 features as follows:
 
 
 ## value proposition
-This project will help the Ministry of Justice and the citizens understand the current land transactions conducted in Jeddah city and predict the price of these transactions in Saudi riyals.
+This project will help the Ministry of Justice and the citizens understand the current land transactions conducted in Jeddah city and predict the square meter price of these transactions in Saudi riyals.
 
 ## Test the app
 [Test the app using streamlit](https://shaimaa-alghamdi-prediction-of-jeddah-land-property--app-pthmne.streamlitapp.com/)
