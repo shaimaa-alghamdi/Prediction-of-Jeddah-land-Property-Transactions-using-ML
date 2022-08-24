@@ -8,19 +8,16 @@ from joblib import dump, load
 import xgboost as xgb
 import re
 
-# To show Image
-from PIL import Image
-image = Image.open('7K1A8759.jpg')
-st.image(image, caption='-')
 
-# 
+
+st.title ("Prediction of Jeddah land Property Transactions")
+
 neighborhood_dict = load('neighborhood_dict2.joblib')
 #block_list = set(load('block_list.joblib'))
 
 # Title
 st.header("know about the Jeddah lands prices before investing!")
-#st.title ("know about the Jeddah lands6 prices before investing!")
-#st.title("Welcome, know about the Jeddah lands prices before investing.")
+
 
 Re = re.compile(".*[أءإاضصثقفغعهخحجةشسيبلاتنمكظطذدزرو]{2}.*") 
 Neighborhood_list = [n for n in list(neighborhood_dict) if Re.match(n) is not None]
