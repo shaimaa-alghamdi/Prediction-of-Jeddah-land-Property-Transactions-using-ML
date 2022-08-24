@@ -11,7 +11,7 @@ Although the companies and ministries in Saudi Arabia have started publishing th
 - Generate insights and plot Arabic labels in the correct formatting as possible.
 - Train and test the model using different ML models.
 - Comparison between the applied models.
-- Deploy machine learning model in production.
+- Deploy machine learning model in production using streamlit app
 
 ## Project Goal 
 There is a significant movement in property transactions in Jeddah city, especially the lands. Therefore, there is a need for an ML model to predict property prices based on the neighborhood, block, area and date.
@@ -26,7 +26,7 @@ This dataset allows clients to find out the data on transactions conducted in ci
 - Quarterly (8 indicators)
 - Annual (8 indicators)
 
-The dataset is collected from [Ministry of Justice][https://www.moj.gov.sa/ar/opendata/bi/birealestate/Dashboards/200_kpiTown/201_Monthly/kpi201_04_G.aspx]. I will choose Jeddah city with all districts as a sample training the model. In addition, the dataset period is from Jan 1, 2021, to Aug 3, 2022 which is the last update from Ministry of Justice
+The dataset is collected from [Ministry of Justice](https://www.moj.gov.sa/ar/opendata/bi/birealestate/Dashboards/200_kpiTown/201_Monthly/kpi201_04_G.aspx). I will choose Jeddah city with all districts as a sample training the model. In addition, the dataset period is from Jan 1, 2021, to Aug 3, 2022 which is the last update from Ministry of Justice
 
 
 The observations of the dataset were descriped using 9 features as follows:
@@ -50,7 +50,7 @@ The observations of the dataset were descriped using 9 features as follows:
 This project will help the Ministry of Justice and the citizens understand the current land transactions conducted in Jeddah city and predict the price of these transactions in Saudi riyals.
 
 ## Test the app
-[Test the app][https://shaimaa-alghamdi-prediction-of-jeddah-land-property--app-pthmne.streamlitapp.com/]
+[Test the app using streamlit](https://shaimaa-alghamdi-prediction-of-jeddah-land-property--app-pthmne.streamlitapp.com/)
 
 
 
